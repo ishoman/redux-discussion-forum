@@ -13,6 +13,7 @@ export default (state = {}, action) => {
     });
     return newState;
   case 'UPDATE_TIME':
+    let newState = state
   default:
     return state;
   }
