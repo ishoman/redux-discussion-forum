@@ -7,7 +7,7 @@
     "test": "jest; exit 0",
     "start": "webpack-dev-server",
     "lint": "eslint src/*.jsx src/**/**; exit 0",
-    "lint-fix": "eslint src/*.jsx src/**/*.jsx src/**/**/*.jsx --fix; exit 0"
+    "lint-fix": "eslint src/*.jsx src/**/*.jsx src/**/*.js src/**/**/*.jsx --fix; exit 0"
   },
   "author": "",
   "license": "ISC",

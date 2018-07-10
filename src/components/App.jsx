@@ -14,7 +14,6 @@ class App extends React.Component {
 
   constructor(props) {
     super(props);
-
   }
   render(){
     const global = {
@@ -24,7 +23,7 @@ class App extends React.Component {
       <div style={global}>
         <Header/>
         <Switch>
-          <Route exact path='/' component={Home} />
+          <Route exact path='/' render={()=><Home postList={this.props.masterPostList}/>} />
           <Route exact path='/newPost' component={NewPostForm} />
         </Switch>
       </div>
@@ -37,7 +36,7 @@ App.propTypes = {
 
 const mapStateToProps = state => {
   return {
-    masterPropList: state
+    masterPostList: state
   };
 };
 
