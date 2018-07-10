@@ -5,9 +5,9 @@ import App from './components/App';
 import { HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import ticketListReducer from './reducers/post-list-reducer';
+import postListReducer from './reducers/post-list-reducer';
 
-const store = createStore(ticketListReducer);
+const store = createStore(postListReducer);
 
 const render = (Component) => {
   ReactDOM.render(

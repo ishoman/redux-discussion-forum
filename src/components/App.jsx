@@ -1,12 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 import { Switch, Route, withRouter } from 'react-router-dom';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 
 import Home from './Home/Home';
 import NewPostForm from './NewPostForm/NewPostForm';
 import Header from './Header/Header';
+
 
 
 class App extends React.Component {
@@ -16,8 +17,11 @@ class App extends React.Component {
 
   }
   render(){
+    const global = {
+      fontFamily: 'sans-serif'
+    };
     return (
-      <div>
+      <div style={global}>
         <Header/>
         <Switch>
           <Route exact path='/' component={Home} />
@@ -34,7 +38,7 @@ App.propTypes = {
 const mapStateToProps = state => {
   return {
     masterPropList: state
-  }
-}
+  };
+};
 
 export default withRouter(connect(mapStateToProps)(App)) ;
