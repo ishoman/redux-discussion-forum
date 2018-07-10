@@ -1,5 +1,5 @@
 # React Reddit-Like App
-**A React application for Epicodus 06.24.18**
+**A React application for Epicodus 07.10.18**
 
 ## By Bobby Martin
 
