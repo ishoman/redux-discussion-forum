@@ -1,15 +1,40 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import PropTypes from 'prop-types'
+
+import { Switch, Route, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux'
+
+import Home from './Home/Home';
+import NewPostForm from './NewPostForm/NewPostForm';
+import Header from './Header/Header';
 
 
-function App(){
-  return (
-    <div>
-      <Switch>
-        
-      </Switch>
-    </div>
-  );
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+  }
+  render(){
+    return (
+      <div>
+        <Header/>
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/newPost' component={NewPostForm} />
+        </Switch>
+      </div>
+    );
+  }
+}
+App.propTypes = {
+  masterPostList: PropTypes.object
+};
+
+const mapStateToProps = state => {
+  return {
+    masterPropList: state
+  }
 }
 
-export default App;
+export default withRouter(connect(mapStateToProps)(App)) ;
