@@ -14,6 +14,6 @@ function Home(props) {
 
 Home.propTypes = {
   postList: PropTypes.object
-}
+};
 
 export default Home;

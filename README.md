@@ -1,10 +1,10 @@
-# React Template App
-**A webpack setup / first React application for Epicodus 06.24.18**
+# React Reddit-Like App
+**A React application for Epicodus 06.24.18**
 
 ## By Bobby Martin
 
 ## Description
-This is a basic React app that uses props, and propTypes eslint, styled-jsx, and hot-swap
+This is a React Redux application that is used to create posts and up or down vote those posts.
 
 ## Setup Requirements
 
@@ -14,6 +14,7 @@ This is a basic React app that uses props, and propTypes eslint, styled-jsx, and
 
 ## Technologies
 * React
+* Redux
 * JavaScript
 * CSS
 * Webpack
