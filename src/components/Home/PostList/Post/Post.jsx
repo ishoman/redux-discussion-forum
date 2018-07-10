@@ -9,6 +9,7 @@ function Post(props) {
       <h2>{props.title}</h2>
       {props.image ? <img src={props.image} /> : null}
       <p>{props.content}</p>
+      <p>{props.timePosted}</p>
       <VoteButtons />
     </div>
   );
@@ -18,5 +19,6 @@ Post.propTypes = {
   image: PropTypes.string,
   content: PropTypes.string.isRequired,
   postId: PropTypes.string.isRequired,
+  timePosted: PropTypes.string.isRequired
 };
 export default Post;

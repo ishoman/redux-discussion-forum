@@ -12,7 +12,8 @@ function PostList(props) {
           image={post.image}
           content={post.content}
           key={postId}
-          postId={postId}/>;
+          postId={postId}
+          timePosted={post.timePosted}/>;
       })}
     </div>
   );

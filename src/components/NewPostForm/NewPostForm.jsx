@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from './NewPostForm.css';
+import Moment from 'moment';
+
 import { connect } from 'react-redux';
 import { v4 } from 'uuid';
 
@@ -17,7 +19,8 @@ function NewPostForm(props){
       id: v4(),
       title: _title.value,
       image: _image.value,
-      content: _content.value
+      content: _content.value,
+      timePosted: new Moment().fromNow()
     };
     dispatch(action);
     _title.value = '';
